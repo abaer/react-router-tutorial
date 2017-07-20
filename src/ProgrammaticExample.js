@@ -4,10 +4,11 @@ export default class ProgrammaticExample extends React.Component {
 
   constructor(props) {
     super(props);
-    this.doRouting = this.doRouting.bind(this)
+    this.changeRouteOnClick = this.changeRouteOnClick.bind(this)
   }
   changeRouteOnClick (e) {
     e.preventDefault()
+    console.log(this)
     var value = this.refs.input.value
     this.props.history.push('/query?test=' + value)
   }

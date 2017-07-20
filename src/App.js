@@ -1,7 +1,6 @@
-// Was App.js
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 import './App.css';
 
 class App extends Component {
@@ -16,10 +15,10 @@ class App extends Component {
           React Router!
         </p>
 
-        <Link to="post/1">URL Parameter Example</Link><hr/>
-        <Link to="query">Query Example</Link><hr/>
-        <Link to="programmatic">Programmatic Example</Link><hr/>
-        <Link to="lkajsdklajdlkasjdkla">404 Example</Link><hr/>
+        <Link to="/post/1">URL Parameter Example</Link><hr/>
+        <Link to="/query?test=3">Query Example</Link><hr/>
+        <Link to="/programmatic">Programmatic Example</Link><hr/>
+        <Link to="/lkajsdklajdlkasjdkla">404 Example</Link><hr/>
       </div>
     );
   }
