@@ -14,7 +14,6 @@ var p1 = new Promise(function(resolve, reject) {
 });
 
 const data = {"name":"alan", "location": "berkeley"}
-const promise = p1
 
 ReactDOM.render(
 	<BrowserRouter>
