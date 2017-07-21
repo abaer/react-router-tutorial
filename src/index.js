@@ -9,7 +9,12 @@ import ProgrammaticExample from './ProgrammaticExample'
 import FourOFour from './404Example'
 import './index.css';
 
+var p1 = new Promise(function(resolve, reject) { 
+    setTimeout(resolve, 2000, 'one'); 
+});
+
 const data = {"name":"alan", "location": "berkeley"}
+const promise = p1
 
 ReactDOM.render(
 	<BrowserRouter>
@@ -18,9 +23,8 @@ ReactDOM.render(
 		<Switch>
 			<Route exact path="/" component={Home} />
 			<Route path="/post/:id" component={ParamsExample} />
-			
 			<Route path='/query' render={(props) => (
-			  <QueryExample {...props} data={data}/>
+			  <QueryExample {...props} data={data} p={p1}/>
 			)}/>
 			<Route path="/programmatic" component={ProgrammaticExample} />
 			<Route component={FourOFour}/>
