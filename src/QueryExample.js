@@ -4,10 +4,14 @@ import React, { PropTypes } from 'react'
 export default function QueryExample (props) {
   //const location = props.location
   const params = new URLSearchParams(props.location.search);
-
   return (
-    <div>
-      The query param test = {params.get("test")}
+  	<div>
+	    <div>
+	      The query param test = {params.get("test")}
+	    </div>
+	    <div>
+	      Extra Data = {JSON.stringify(props.data)}
+	    </div>
     </div>
   )
 }

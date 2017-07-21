@@ -9,6 +9,8 @@ import ProgrammaticExample from './ProgrammaticExample'
 import FourOFour from './404Example'
 import './index.css';
 
+const data = {"name":"alan", "location": "berkeley"}
+
 ReactDOM.render(
 	<BrowserRouter>
 	<div>
@@ -16,7 +18,10 @@ ReactDOM.render(
 		<Switch>
 			<Route exact path="/" component={Home} />
 			<Route path="/post/:id" component={ParamsExample} />
-			<Route path="/query" component={QueryExample} />
+			
+			<Route path='/query' render={(props) => (
+			  <QueryExample {...props} data={data}/>
+			)}/>
 			<Route path="/programmatic" component={ProgrammaticExample} />
 			<Route component={FourOFour}/>
 		</Switch>
