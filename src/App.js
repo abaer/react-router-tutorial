@@ -15,7 +15,9 @@ class App extends Component {
           React Router!
         </p>
 
-        <Link to="/post/1">URL Parameter Example</Link><hr/>
+        <Link to="/city/1">City 1</Link><hr/>
+        <Link to="/city/2">City 2</Link><hr/>
+        <Link to="/city/3">City 3</Link><hr/>
         <Link to="/query?test=3">Query Example</Link><hr/>
         <Link to="/programmatic">Programmatic Example</Link><hr/>
         <Link to="/lkajsdklajdlkasjdkla">404 Example</Link><hr/>

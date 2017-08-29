@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 export default function ParamsExample (props) {
   const params = props.match.params
   return (
     <div>
-      The id is: {params.id}
+      The city is: {params.id}
     </div>
   )
 }
